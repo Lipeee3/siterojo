@@ -356,7 +356,7 @@ header {
     top: 0;
     z-index: 100;
 }
-
+@media (max-width: 768px) {
 header .container {
     display: flex;
     justify-content: space-between;
@@ -364,8 +364,8 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    }
 }
-
 /* Ajustando o formulário */
 .form-container {
     max-width: 800px;

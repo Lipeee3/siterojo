@@ -89,17 +89,17 @@ nav ul li a.active {
     text-align: center;
     padding: 100px 20px;
 }
-
+@media (max-width: 480px) {
 .hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
-}
+    }
 
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    }
 }
-
 /* Features */
 .features {
     padding: 80px 0;
@@ -356,7 +356,7 @@ header {
     top: 0;
     z-index: 100;
 }
-
+@media (max-width: 768px) {
 header .container {
     display: flex;
     justify-content: space-between;
@@ -364,6 +364,7 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    }
 }
 
 /* Ajustando as estatísticas do dashboard */
