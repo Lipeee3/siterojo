@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Simular login (substitua por autenticação real)
+    const username = localStorage.getItem('username') || 'Administrador';
+    document.getElementById('admin-name').textContent = username;
+
+    // Botão de logout
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            // Remove o nome do usuário do localStorage
+            localStorage.removeItem('username');
+
+
+            // Redireciona para a página de login
+            window.location.href = 'login.html'; // Certifique-se de que o caminho está correto
+        });
+    }
+
+  });
+
 // Funções gerais compartilhadas por todas as páginas
 
 // Função para mostrar notificações

@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Simular login (substitua por autenticação real)
+    const username = localStorage.getItem('username') || 'Administrador';
+    document.getElementById('admin-name').textContent = username;
+
+    // Botão de logout
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            // Remove o nome do usuário do localStorage
+            localStorage.removeItem('username');
+
+          
+            // Redireciona para a página de login
+            window.location.href = 'login.html'; // Certifique-se de que o caminho está correto
+        });
+    }});
+
+
+
 // Função para carregar os ingredientes do estoque com suas quantidades
 async function loadIngredientsWithStock() {
     try {
@@ -205,9 +225,5 @@ document.addEventListener('DOMContentLoaded', async function() {
         alert('Receita salva com sucesso!');
     }
     
-    // Adicione aqui a inicialização para o modal de edição de receitas
-    // ...
-});
 
-// Adicione o código para o modal de edição, visualização e outras funcionalidades necessárias
-// ...
+});

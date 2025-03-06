@@ -115,7 +115,7 @@ nav ul li a.active {
 .feature-box {
     flex: 1;
     text-align: center;
-    padding: 30px;
+    padding: 60px;
     margin: 15px;
     background-color: white;
     border-radius: 5px;
@@ -264,12 +264,14 @@ main-content {
 .search-bar {
     margin-bottom: 20px;
     display: flex;
+    margin-left: auto;
 }
 
 .search-bar input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
+    margin-left: auto;
     border-radius: 5px 0 0 5px;
 }
 
@@ -301,19 +303,26 @@ main-content {
 /* Centralizando o conteúdo da página */
 .admin-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
     align-items: flex-start; /* Alinha o conteúdo no topo */
     padding: 20px;
-    max-width: 1500px; /* Largura máxima do conteúdo */
+    max-width: 2000px; /* Largura máxima do conteúdo */
     margin: 0 auto; /* Centraliza o contêiner */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
 }
 
 /* Ajustando o conteúdo principal */
 .main-content {
-    flex: 1;
-    margin-left: 250px; /* Margem para a sidebar */
-    padding: 20px;
-    width: calc(100% - 250px); /* Largura total menos a sidebar */
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px; /* Ajuste o padding conforme necessário */
+    max-width: 1200px; /* Largura máxima da box */
+    width: 100%; /* Faz a box ocupar 100% da largura disponível */
+    margin: 0 auto; /* Centraliza a box horizontalmente */
+    margin-left: 250px; /* Margem à esquerda para evitar sobreposição com a sidebar */
+    position: relative;
+    text-align: left; /* Alinha o conteúdo interno à esquerda */
 }
 
 .main-content h2 {
@@ -322,6 +331,7 @@ main-content {
     color: #f87060; /* Cor do tema */
     font-size: 28px; /* Tamanho da fonte */
 }
+
 
 /* Ajustando a sidebar */
 .sidebar {

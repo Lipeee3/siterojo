@@ -299,22 +299,37 @@ main-content {
 }
 
 /* Centralizando o conteúdo da página */
-.admin-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alinha o conteúdo no topo */
-    padding: 20px;
-    max-width: 1500px; /* Largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o contêiner */
+.main-content {
+    margin-left: 270px; /* Aumentando a margem esquerda (250px da sidebar + 20px de espaço) */
+    padding: 30px;
+    width: calc(100% - 290px); /* Ajustando a largura para considerar a margem */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 5;
+    min-height: calc(100vh - 125px); /* Garantindo altura mínima */
 }
 
-/* Ajustando o conteúdo principal */
-.main-content {
-    flex: 1;
-    margin-left: 250px; /* Margem para a sidebar */
-    padding: 20px;
-    width: calc(100% - 250px); /* Largura total menos a sidebar */
+/* Garantindo que o container administrativo tenha o layout correto */
+.admin-container {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    max-width: none; /* Removendo limitação de largura máxima */
+    margin-top: 20px;
 }
+
+/* Ajustando o container para considerar o layout com sidebar */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px; /* Aumentando um pouco para telas maiores */
+}
+
 
 .main-content h2 {
     text-align: center; /* Centraliza o título */
@@ -322,6 +337,8 @@ main-content {
     color: #f87060; /* Cor do tema */
     font-size: 28px; /* Tamanho da fonte */
 }
+
+
 
 /* Ajustando a sidebar */
 .sidebar {

@@ -115,7 +115,7 @@ nav ul li a.active {
 .feature-box {
     flex: 1;
     text-align: center;
-    padding: 30px;
+    padding: 60px;
     margin: 15px;
     background-color: white;
     border-radius: 5px;
@@ -228,6 +228,17 @@ table th {
     border-bottom: 2px solid #f87060; /* Adicionando borda ao passar o mouse ou para o link ativo */
 }
 
+/* Ajustando a posição e o conteúdo principal */
+main-content {
+    margin-left: 250px;
+    margin-top: 60px;
+    max-width: 1200px;
+    margin: 0;
+    padding: 20px;
+    flex: 1;
+    z-index: 1;
+    width: calc(100% - 250px);
+}
 
 .container{
     width: 100%;
@@ -239,13 +250,6 @@ table th {
 
 .main-content {
     margin-left: 0;
-}
-
-.main-content h2 {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
-    color: #f87060; /* Cor do tema */
-    font-size: 28px; /* Tamanho da fonte */
 }
 
 /* Estilo específico para o texto "Administrador" */
@@ -260,12 +264,14 @@ table th {
 .search-bar {
     margin-bottom: 20px;
     display: flex;
+    margin-left: auto;
 }
 
 .search-bar input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
+    margin-left: auto;
     border-radius: 5px 0 0 5px;
 }
 
@@ -295,23 +301,36 @@ table th {
 }
 
 /* Centralizando o conteúdo da página */
-/* Centralizando o conteúdo da página */
 .admin-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
     align-items: flex-start; /* Alinha o conteúdo no topo */
     padding: 20px;
-    max-width: 1200px; /* Largura máxima do conteúdo */
+    max-width: 2000px; /* Largura máxima do conteúdo */
     margin: 0 auto; /* Centraliza o contêiner */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
 }
 
 /* Ajustando o conteúdo principal */
 .main-content {
-    flex: 1;
-    margin-left: 250px; /* Margem para a sidebar */
-    padding: 20px;
-    width: calc(100% - 250px); /* Largura total menos a sidebar */
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px; /* Ajuste o padding conforme necessário */
+    max-width: 1200px; /* Largura máxima da box */
+    width: 100%; /* Faz a box ocupar 100% da largura disponível */
+    margin: 0 auto; /* Centraliza a box horizontalmente */
+    margin-left: 250px; /* Margem à esquerda para evitar sobreposição com a sidebar */
+    position: relative;
+    text-align: left; /* Alinha o conteúdo interno à esquerda */
 }
+.main-content h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+    color: #f87060; /* Cor do tema */
+    font-size: 28px; /* Tamanho da fonte */
+}
+
 
 /* Ajustando a sidebar */
 .sidebar {
@@ -345,6 +364,40 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Ajustando as estatísticas do dashboard */
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.stat-card i {
+    font-size: 40px;
+    color: #f87060;
+    margin-bottom: 15px;
+}
+
+.stat-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stat-info p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
 
 /* Ajustando o formulário */

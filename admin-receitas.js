@@ -1,14 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Simulate user login (replace with actual authentication)
-    const username = localStorage.getItem('username') || 'Usuário Padrão';
-    document.getElementById('username').textContent = username;
+    // Simular login (substitua por autenticação real)
+    const username = localStorage.getItem('username') || 'Administrador';
+    document.getElementById('admin-name').textContent = username;
 
-    // Logout functionality
-    document.getElementById('logout-btn').addEventListener('click', () => {
-        // Implement logout logic here
-        window.location.href = 'login.html'; // Adjust to your login page
-    });
+    // Botão de logout
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', () => {
+            // Remove o nome do usuário do localStorage
+            localStorage.removeItem('username');
 
+            // Exibe um alerta personalizado (opcional)
+           // alert('Você foi desconectado com sucesso!');
+
+            // Redireciona para a página de login
+            window.location.href = 'login.html'; // Certifique-se de que o caminho está correto
+        });
+    }
     // Load recipes from admin-cardapio.html
     async function loadRecipes() {
         try {

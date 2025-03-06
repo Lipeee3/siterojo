@@ -12,15 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
         adminNameElement.textContent = currentUser.username;
     }
     
-    // Logout
-    const logoutBtn = document.getElementById('logout-btn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function() {
-            localStorage.removeItem('currentUser');
-            window.location.href = 'login.html';
-        });
-    }
-    
+      // Botão de logout
+      const logoutBtn = document.getElementById('logout-btn');
+      if (logoutBtn) {
+          logoutBtn.addEventListener('click', () => {
+              // Remove o nome do usuário do localStorage
+              localStorage.removeItem('username');
+  
+  
+              // Redireciona para a página de login
+              window.location.href = 'login.html'; // Certifique-se de que o caminho está correto
+          });
+      }
     const addInventoryForm = document.getElementById('add-inventory-form');
     const inventoryTable = document.getElementById('inventory-table').querySelector('tbody');
     const searchInput = document.getElementById('inventory-search');
